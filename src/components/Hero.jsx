@@ -8,9 +8,8 @@ export default function Hero() {
     const handleDownloadCV = () => {
         setIsDownloading(true);
 
-        // Create a simple CV PDF (you'll replace this URL with your actual CV)
         const link = document.createElement('a');
-        link.href = '/cv.pdf'; // Replace with your actual CV path
+        link.href = '/cv.pdf';
         link.download = 'Elisabeth_CV.pdf';
         document.body.appendChild(link);
         link.click();
@@ -24,7 +23,6 @@ export default function Hero() {
 
         <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
             <FloatingCodeSymbols />
-            {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 bg-rose-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-red-300 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -32,16 +30,12 @@ export default function Hero() {
 
             {/* Content */}
             <div className="relative z-10 space-y-6">
-                {/* Name with fade-in animation */}
                 <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg animate-fade-in">
                     Hi, I'm Elisabeth
                 </h1>
-
-                {/* Subtitle with delayed fade-in */}
                 <p className="mt-4 text-lg md:text-xl text-gray-100 max-w-2xl animate-fade-in-up">
                     Frontend Developer building AI-powered web apps and interactive experiences.
                 </p>
-
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
                     <a
