@@ -5,19 +5,22 @@ const projects = [
         title: "AI Resume Builder",
         description: "Generate tailored resumes with AI. Focus on frontend UX and prompt integration.",
         tech: ["React", "Tailwind", "OpenAI API"],
-        status: "Live"
+        status: "Live",
+        link: "#"
     },
     {
         title: "AI writing assistant",
         description: "An AI-powered tool to help you write better and faster.",
         tech: ["React", "API", "UI/UX"],
-        status: "Coming Soon"
+        status: "Coming Soon",
+        link: "#"
     },
     {
         title: "AI Image Captioner",
         description: "Upload an image and generate descriptive captions using AI.",
         tech: ["React", "Tailwind", "OpenAI API"],
-        status: "Coming Soon"
+        status: "Coming Soon",
+        link: "#"
     }
 ];
 

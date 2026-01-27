@@ -1,4 +1,4 @@
-export default function ProjectCard({ title, description, tech, status }) {
+export default function ProjectCard({ title, description, tech, status, link }) {
     return (
         <div className="border bg-white border-white-800 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
             <h3 className="text-xl font-semibold text-rose-500">{title}</h3>
@@ -12,7 +12,7 @@ export default function ProjectCard({ title, description, tech, status }) {
                 ))}
             </div>
 
-            <p className="mt-4 text-indigo-400 text-sm">{status}</p>
+            <p className="mt-4 text-indigo-400 text-sm">{status} - <a href={link} className="mt-4 text-indigo-400 text-sm underline">View Project</a></p>
         </div>
     );
 }
