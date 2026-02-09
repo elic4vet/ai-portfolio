@@ -12,7 +12,7 @@ export default function ProjectCard({ title, description, tech, status, link }) 
                 ))}
             </div>
 
-            <p className="mt-4 text-indigo-400 text-sm">{status} - <a href={link} className="mt-4 text-indigo-400 text-sm underline">View Project</a></p>
+            <p className="mt-4 text-indigo-400 text-sm">{status} - <a href={link} className="mt-4 text-indigo-400 text-sm underline" target="_blank">View Project</a></p>
         </div>
     );
 }

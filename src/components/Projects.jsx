@@ -6,7 +6,7 @@ const projects = [
         description: "Generate tailored resumes with AI. Focus on frontend UX and prompt integration.",
         tech: ["React", "Tailwind", "OpenAI API"],
         status: "Live",
-        link: "#"
+        link: "https://ai-resume26.vercel.app/"
     },
     {
         title: "AI writing assistant",
