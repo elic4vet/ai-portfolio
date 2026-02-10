@@ -12,8 +12,8 @@ const projects = [
         title: "AI writing assistant",
         description: "An AI-powered tool to help you write better and faster.",
         tech: ["React", "API", "UI/UX"],
-        status: "Coming Soon",
-        link: "#"
+        status: "Live",
+        link: "https://ai-text-assistant-dun.vercel.app/"
     },
     {
         title: "AI Image Captioner",
