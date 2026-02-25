@@ -19,16 +19,36 @@ export default function Hero() {
     };
 
     return (
-
-
         <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
             <FloatingCodeSymbols />
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full 
+                bg-white/5 backdrop-blur-xl border border-rose-500/20 
+                shadow-[0_0_30px_rgba(244,63,94,0.15)] 
+                transition-all duration-700 delay-100 
+                hover:border-rose-500/40 hover:shadow-[0_0_40px_rgba(244,63,94,0.25)] 
+                hover:scale-105 cursor-default
+                opacity-100 translate-y-0">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                    className="lucide lucide-sparkles w-4 h-4 text-rose-200 animate-pulse" aria-hidden="true">
+                    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                    <path d="M20 3v4"></path><path d="M22 5h-4"></path>
+                    <path d="M4 17v2"></path><path d="M5 18H3"></path>
+                </svg>
+
+                <span className="text-sm font-medium text-rose-200/90 tracking-wide">Available for hire</span>
+                <span className="relative flex w-3 h-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full w-3 h-3 bg-emerald-400 shadow-[0_0_8px_2px_rgba(52,211,153,0.8)]"></span>
+                </span>
+            </div>
+
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 bg-rose-300 rounded-full opacity-20 blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-red-300 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
 
-            {/* Content */}
             <div className="relative z-10 space-y-6">
                 <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg animate-fade-in">
                     Hi, I'm Elisabeth
@@ -36,7 +56,6 @@ export default function Hero() {
                 <p className="mt-4 text-lg md:text-xl text-gray-100 max-w-2xl animate-fade-in-up">
                     Frontend Developer building AI-powered web apps and interactive experiences.
                 </p>
-                {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
                     <a
                         href="#projects"
@@ -49,7 +68,7 @@ export default function Hero() {
                     <button
                         onClick={handleDownloadCV}
                         disabled={isDownloading}
-                        className="px-8 py-4 bg-rose-500 text-white font-semibold rounded-xl hover:bg-rose-700 hover: transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed appearance-none important"
+                        className="px-8 py-4 bg-rose-500 text-white font-semibold rounded-xl hover:bg-rose-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed appearance-none"
                     >
                         {isDownloading ? (
                             <span className="flex items-center gap-2">
@@ -69,7 +88,6 @@ export default function Hero() {
                         )}
                     </button>
                 </div>
-                {/* Scroll indicator */}
                 <div className="mt-16 animate-bounce">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +101,7 @@ export default function Hero() {
                     >
                         <path d="M12 5v14M19 12l-7 7-7-7" />
                     </svg>
-                    <p className="text-white text-sm mt-2"> <a href="#about" className="text-white hover:underline">Scroll down </a></p>
+                    <p className="text-white text-sm mt-2"><a href="#about" className="text-white hover:underline">Scroll down</a></p>
                 </div>
             </div>
 
@@ -116,6 +134,15 @@ export default function Hero() {
 
                 .animate-fade-in-up {
                     animation: fade-in-up 1s ease-out 0.3s backwards;
+                }
+
+                @keyframes ping-slow {
+                    0%, 100% { transform: scale(1); opacity: 1; }
+                    50% { transform: scale(1.8); opacity: 0.3; }
+                }
+
+                .animate-ping-slow {
+                    animation: ping-slow 2s ease-in-out infinite;
                 }
             `}</style>
         </section>
