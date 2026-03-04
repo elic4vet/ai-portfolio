@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import FloatingCodeSymbols from '../assets/floating.jsx';
+import CV from '../assets/CV-Elisabeth_Erkekoglou.pdf';
 
 export default function Hero() {
     const [isDownloading, setIsDownloading] = useState(false);
@@ -8,12 +9,16 @@ export default function Hero() {
     const handleDownloadCV = () => {
         setIsDownloading(true);
 
-        const link = document.createElement('a');
-        link.href = '/cv.pdf';
-        link.download = 'Elisabeth_CV.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        try {
+            const link = document.createElement('a');
+            link.href = CV;
+            link.download = 'CV-Elisabeth_Erkekoglou.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (error) {
+            console.error('Error downloading CV:', error);
+        }
 
         setTimeout(() => setIsDownloading(false), 1000);
     };
