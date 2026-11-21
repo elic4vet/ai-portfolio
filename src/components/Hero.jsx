@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import FloatingCodeSymbols from '../assets/floating.jsx';
-import CV from '../assets/CV-Elisabeth_Erkekoglou.pdf';
+import CV from '../assets/CV-Elisabeth_Erkekoglou_11.pdf';
 
 export default function Hero() {
     const [isDownloading, setIsDownloading] = useState(false);
@@ -12,7 +12,7 @@ export default function Hero() {
         try {
             const link = document.createElement('a');
             link.href = CV;
-            link.download = 'Elisabeth_Erkekoglou _11.pdf';
+            link.download = 'CV-Elisabeth_Erkekoglou_11.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
