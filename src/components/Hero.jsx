@@ -12,7 +12,7 @@ export default function Hero() {
         try {
             const link = document.createElement('a');
             link.href = CV;
-            link.download = 'CV-Elisabeth_Erkekoglou.pdf';
+            link.download = 'Elisabeth_Erkekoglou _11.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
